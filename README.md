@@ -1,14 +1,14 @@
-🔐 Homomorphic Encryption MNIST Digit Classifier
+##🔐 Homomorphic Encryption MNIST Digit Classifier
 
 A privacy-preserving neural network for handwritten digit classification using Homomorphic Encryption (HE). This project demonstrates how machine learning inference can be performed directly on encrypted data — without ever decrypting it.
 
-🚀 Overview
+##🚀 Overview
 
 This project implements an MNIST digit classifier that operates on encrypted inputs using Homomorphic Encryption. It ensures that sensitive data remains secure throughout the entire inference pipeline.
 
 
 
-🧠 Features
+##🧠 Features
 
 🔒 End-to-end encrypted inference
 
