@@ -1,21 +1,40 @@
-#🔐 Homomorphic Encryption MNIST Digit Classifier
+# 🔐 Homomorphic Encryption MNIST Digit Classifier
 
-A privacy-preserving neural network for handwritten digit classification using Homomorphic Encryption (HE). This project demonstrates how machine learning inference can be performed directly on encrypted data — without ever decrypting it.
+A privacy-preserving neural network for handwritten digit classification using Homomorphic Encryption (HE). It enables inference directly on encrypted data — **no access to raw inputs required**.
 
-#🚀 Overview
+---
 
-This project implements an MNIST digit classifier that operates on encrypted inputs using Homomorphic Encryption. It ensures that sensitive data remains secure throughout the entire inference pipeline.
+## 🚀 Overview
 
+This project demonstrates secure ML by running an MNIST classifier on encrypted images. The model is trained in plaintext but evaluated in the encrypted domain, ensuring user data remains private.
 
+---
 
-#🧠 Features
+## 🧠 Features
 
-🔒 End-to-end encrypted inference
+* 🔒 End-to-end encrypted inference
+* 🧮 HE-friendly architecture (polynomial activations)
+* ⚡ Optimized linear layers (diagonal method)
+* 🧪 Evaluated on MNIST dataset
 
-🧮 Keeps track of previous hits as data in-session
+---
 
-📉 Polynomial activation functions (HE-compatible)
+## 🏗 Architecture
 
-🧪 Evaluated on MNIST dataset
+```
+Input (784) → Linear → Square → Linear → Output (10)
+```
 
-🛠 Built with PyTorch + HE library
+Designed to work within HE constraints:
+
+* ReLU replaced with square activation
+* Limited depth to control noise
+* Linear layers adapted for encrypted computation
+
+## ⚠️ Limitations & Future Work
+
+Slower than standard inference
+
+Limited model complexity
+
+Future: better packing, deeper models, deployment as API
